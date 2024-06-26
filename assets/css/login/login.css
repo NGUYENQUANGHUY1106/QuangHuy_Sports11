@@ -1,0 +1,170 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+body
+{
+    height: 100vh;
+    background-color: #161b21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* star_login */
+#page
+{
+    width: 1440px;
+    height: 670px;
+    background: #161b21;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #3dc9d9;
+}
+#page .logo
+{
+    position: absolute;
+    top:30px;
+    left: 35px;
+    animation:  ani1 4s infinite linear;
+}
+/* hiện ứng */
+@keyframes ani1
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+#page .logo ion-icon
+{
+    transition: all 0.1s;
+    font-size:  70px;
+    color: aqua;
+    animation: ani2 5s infinite linear;
+}
+/* hiệu ứng */
+@keyframes ani2
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(700deg);
+    }
+}
+
+
+.content
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+/* left_login */
+.left
+{
+    width: 50%;
+    padding-top: 220px;
+    padding-left: 150px;
+}
+.left .title
+{
+    height: 100px;
+}
+
+.left .title h1
+{
+    color: #f4a950;
+    font-size: 95px;
+    letter-spacing: 7px;
+}
+.left p
+{
+    font-size:20px;
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.left button
+{
+    width: 195px;
+    height: 42px;
+    border: 1px solid #27f2ff;
+    background: transparent;
+    color: #fff;
+    margin-top: 100px;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ball_run img
+{
+    width: 250px;
+    position: absolute;
+    bottom: 5%;
+    left: 17%;
+}
+/* right_login */
+.right
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px ;
+}
+.form_login
+{
+    width: 492px;
+    height: 596px;
+    border: 1px solid aqua;
+    box-shadow:  0px 0px 10px #7ef2dd;
+}
+
+.form_login h1
+{
+    margin-top: 76px;
+    color: lightpink;
+    text-align: center;
+    margin-bottom: 67px;
+}
+
+.form_login input
+{
+  display: block;
+  width: 350px;
+  height: 50px;
+  margin: 0px auto;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  background: lightcyan;
+  color: #161b21;
+  font-weight: bold
+}
+
+.form_login input[type ='submit']
+{
+    width: 212px;
+    height: 53px;
+    border: 1px solid #27f2ff;
+    margin-top: 75px;
+    padding: 0;
+
+}
