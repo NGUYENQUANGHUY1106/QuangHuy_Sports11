@@ -1,55 +1,94 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
-#header
-{
-    background-color:rgb(237, 234, 234);
+
+#header {
+    background-color: rgb(237, 234, 234);
     max-width: 100%;
     display: flex;
     justify-content: space-between;
-    text-wrap: nowrap;
+    flex-wrap: wrap;
+    padding: 10px;
 }
-.left_header
-{
+
+.left_header {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .email_header,
 .clock_header,
-.phone_header
-{
+.phone_header {
     display: flex;
     margin: 10px 10px;
+    align-items: center;
 }
-.left_header .ingredient_header
-{
+
+.left_header .ingredient_header {
     font-size: 18px;
     color: #575656;
     line-height: 1;
     margin-left: 5px;
 }
+
 .email_header1:hover,
-.phone_header1:hover
-{
+.phone_header1:hover {
     color: blue;
     cursor: pointer;
     text-decoration: underline solid blue;
 }
+
 /* right_header */
-.right_header ion-icon
-{
+.right_header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.right_header ion-icon {
     width: 20px;
     height: 20px;
     margin: 10px 5px;
     cursor: pointer;
     border-radius: 50%;
 }
-.right_header ion-icon:hover
-{
+
+.right_header ion-icon:hover {
     background-color: red;
     color: #fff;
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left_header,
+    .right_header {
+        justify-content: center;
+    }
+
+    .email_header,
+    .clock_header,
+    .phone_header {
+        margin: 5px 0;
+    }
+
+    .right_header a {
+        margin: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .left_header .ingredient_header {
+        font-size: 16px;
+    }
+
+    .right_header ion-icon {
+        margin: 5px;
+    }
+}
