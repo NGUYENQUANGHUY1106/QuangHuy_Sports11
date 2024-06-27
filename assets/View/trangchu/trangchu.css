@@ -92,3 +92,81 @@
         margin: 5px;
     }
 }
+/* content */
+#content
+{
+    max-width: 100%;
+
+}
+.header_content
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header_content .logo
+{
+  width: 180px;
+  height: 180px;
+}
+.header_content .search_sanpham
+{
+    width: 310px;
+    height: 33px;
+    font-size: 15px;
+    border: 2px solid #99ca58;
+    box-shadow: 0px 0px 3px #99ca58;
+}
+.header_content .search
+{
+    width: 50px;
+    height: 34px;
+    margin-left: -5px;
+    border: 1px solid #99ca58;
+    background-color: #99ca58;
+    box-shadow: 0px 0px 3px #99ca58;
+}
+.header_content .search:hover
+{
+    background-color: #76aa33;
+    cursor: pointer;
+}
+.header_content .search_sanpham:focus {
+    outline: none;
+    border: 2px solid #99ca58; /* giữ nguyên màu viền ban đầu */
+}
+.giohang_content
+{
+    display: flex;
+    margin: 0px 15px;
+}
+.giohang_content .giohang_center
+{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+/* menu */
+#menu
+{
+    max-width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+#menu .nav_menu
+{
+    display: flex;
+}
+#menu .nav_menu li
+{
+  list-style-type: none;
+  padding: 5px 0px;
+  margin: 10px 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#menu .nav_menu li:hover
+{
+    color: #c4c4c4;
+}
