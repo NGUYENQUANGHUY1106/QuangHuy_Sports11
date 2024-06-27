@@ -24,3 +24,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }, 400);  // Thay đổi tốc độ ở đây, hiện tại là 200ms
 });
+// Thêm vào file login.js
+document.getElementById('showRegisterForm').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.form_login').style.display = 'none';
+    document.querySelector('.form_register').style.display = 'block';
+});
+
+document.getElementById('showLoginForm').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.form_register').style.display = 'none';
+    document.querySelector('.form_login').style.display = 'block';
+});
