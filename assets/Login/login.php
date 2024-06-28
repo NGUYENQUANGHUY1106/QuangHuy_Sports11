@@ -20,14 +20,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   }
    
   // validate Login auththencation
-  $query = "SELECT * FROM nguoidung WHERE username='$username' AND password='$password'"; 
+  $query = "SELECT * FROM user WHERE username='$username' AND password='$password'"; 
 
   $result = $conn->query($query);
 
   if($result->num_rows ==1)
   {
     // thong báo đăng nhập thành công
-    header("Location: trangchu.html");
+    header("Location: ../View/trangchu/trangchu.html");
     exit();
   }
   else

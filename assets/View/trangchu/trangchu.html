@@ -16,9 +16,7 @@
               </div>
               <div class="clock_header">
                 <img style="width: 20px; height: 20px;" src="/assets/View/trangchu/image/icons8-clock-30.png" alt="">
-                <label class="ingredient_header" for="clock">
-                    08:00 - 22:00
-                </label>
+                <label class="ingredient_header" for="clock">08:00 - 22:00</label>
               </div>
               <div class="phone_header">
                 <img style="width: 20px; height: 20px;" src="/assets/View/trangchu/image/icons8-phone-30.png" alt="">
@@ -26,47 +24,87 @@
               </div>
             </div>
             <div class="right_header">
-                <a style="color: #000;" href="https://www.facebook.com/profile.php?id=100081001793968"><ion-icon  name="logo-facebook"></ion-icon></a>
-                <a  style="color: #000;" href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                <a  style="color: #000;" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                <a  style="color: #000;" href="#"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></a>
-                <a  style="color: #000;" href="https://github.com/NGUYENQUANGHUY1106/QuangHuy_Sports11"><ion-icon name="logo-github"></ion-icon></a>
+                <a style="color: #000;" href="https://www.facebook.com/profile.php?id=100081001793968"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a style="color: #000;" href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a style="color: #000;" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a style="color: #000;" href="#"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></a>
+                <a style="color: #000;" href="https://github.com/NGUYENQUANGHUY1106/QuangHuy_Sports11"><ion-icon name="logo-github"></ion-icon></a>
             </div>
         </div>
-        <div id="content">
-          <div class="header_content">
-            <div class="logo_content">
-              <img src="/assets/View/trangchu/image/Logo.png" alt="" class="logo">
-            </div>
-            <div class="search_content">
-              <input class="search_sanpham" type="text" placeholder="Tìm Kiếm Sản Phẩm Ở Đây ">
-            <button class="search">
-              <ion-icon name="search-outline"></ion-icon>
-            </button>
-            </div>
-            <div class="giohang_content">
-              <div class="giohang">
-                <img src="/assets/View/trangchu/image/icons8-cart-30.png" alt="">
-               <a style="text-decoration: none; color: #000;" href="#">
-                <label for="" class="giohang_center">
-                  Giỏ Hàng
-                </label>
-               </a>
-              </div>
-            </div>
 
-          </div>
-        </div>
-        <div id="menu">
+        <nav id="menu">
+          <button class="menu-toggle">
+            <img style="width: 50px;" src="/assets/View/trangchu/image/logonav.png" alt="">
+          </button>
           <ul class="nav_menu">
-            <li style="margin-left: 180px;">Trang Chủ</li>
-            <li> Giới Thiệu</li>
+            <li class="logg_tamthoi"><img src="/assets/View/trangchu/image/logonav.png" style="width: 100px;" alt=""></li>
+            <li >Trang Chủ</li>
+            <li>Giới Thiệu</li>
             <li>Khuyến Mãi</li>
             <li>Tin Tức</li>
+            <li class="search_nav">
+              <input class="search_sanpham_nav" type="text" placeholder="Tìm kiếm ở đây">
+              <button class="search_nav_button">
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+            </li>
+            <li class="giohang_nav">
+              <div class="giohang">
+                <img src="/assets/View/trangchu/image/icons8-cart-30.png" alt="">
+                <a style="text-decoration: none; color: #fff;" href="#">
+                  <label for="" class="giohang_center">Giỏ Hàng</label>
+                </a>
+              </div>
+            </li>
           </ul>
+        </nav>
+        <div class="slider">
+          <div class="list">
+              <div class="item">
+                  <img style="width: 1472.8px"  src="image/hình nền 5.webp" alt="">
+              </div>
+              <div class="item">
+                  <img style="width: 1472.8px" src="image/hình nền 2.jpg" alt="">
+              </div>
+              <div class="item">
+                  <img style="width: 1472.8px" src="image/hình nền 3.webp" alt="">
+              </div>
+              <div class="item">
+                <img style="width: 1472.8px" src="image/hình nền 4.jpg" alt="">
+            </div>
+            <div class="item">
+              <img style="width: 1472.8px" src="image/hình nền 1.png" alt="">
+          </div>
+          </div>
+          <div class="buttons">
+              <button id="prev"><</button>
+              <button id="next">></button>
+          </div>
+          <ul class="dots">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div>
+      <div id="content">
+        <div class="sub_nav_content">
+           <img src="/assets/View/trangchu/image/sub_nav_content.png" alt="">
+           <p class="introduction">
+            Giày Thể Thao
+           </p>
         </div>
-        <div id="slider">
+        <div class="sub_nav_content">
+
         </div>
+        <div class="sub_nav_content">
+
+        </div>
+        <div class="sub_nav_content">
+
+        </div>
+      </div>
     </div>
 <script src="trangchu.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

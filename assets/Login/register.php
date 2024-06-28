@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         // Đăng ký thành công
         echo "Registration successful. Redirecting...";
-        header("refresh:3;url=trangchu.html");
+        header("refresh:3;url= ../View/trangchu/trangchu.html");
         exit();
     } else {
         // Đăng ký thất bại
