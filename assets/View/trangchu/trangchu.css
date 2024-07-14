@@ -273,55 +273,78 @@
     width: 30px;
 }
 /* content */
-#content
-{
+#content {
     width: 100%;
     display: flex;
+    flex-wrap: wrap; /* Cho phép các mục bao gói xuống dòng tiếp theo */
     justify-content: space-around;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-#content .sub_nav_content
-{
+
+#content .sub_nav_content {
     width: 23%;
     border: 1px solid;
     box-shadow: 0px 0px 5px greenyellow;
+    margin-bottom: 20px; /* Thêm khoảng cách giữa các hàng */
+    box-sizing: border-box;
 }
-.sub_nav_content .img_content
-{
+
+.sub_nav_content .img_content {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 0px;
     
 }
-.img_content img
-{
-    width: 304px;
-    height: 380px;
+
+.img_content img {
+    width: 95%;
+    height: auto;
+    margin: 10px 10px;
 }
+
 .sub_nav_content .introdcuton {
     position: absolute;
-    bottom: 10px; 
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    color: white; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 10px; 
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
     margin: 10px 0px;
-    text-wrap: nowrap;
+    white-space: nowrap;
     border-radius: 10px;
-    
+    text-align: center; /* Đảm bảo văn bản được căn giữa */
 }
-.sub_nav_content .introdcuton:hover
-{
+
+.sub_nav_content .introdcuton:hover {
     background-color: rgb(242, 242, 120);
     color: green;
     text-transform: uppercase;
     cursor: pointer;
     opacity: 0.7;
 }
+
+/* Truy vấn media cho thiết kế đáp ứng */
+
+/* Đối với máy tính bảng và màn hình nhỏ */
+@media (max-width: 992px) {
+    #content .sub_nav_content {
+        width: 45%;
+    }
+}
+
+/* Đối với điện thoại di động */
+@media (max-width: 576px) {
+    #content {
+        justify-content: center;
+    }
+    #content .sub_nav_content {
+        width: 90%;
+    }
+}
+
 
 @media screen and (max-width: 768px){
     .slider{
