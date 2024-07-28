@@ -319,12 +319,13 @@
 }
 
 .sub_nav_content .introdcuton:hover {
-    background-color: rgb(242, 242, 120);
-    color: green;
+    background-color: rgb(255, 255, 70);
+    color: red;
     text-transform: uppercase;
     cursor: pointer;
     opacity: 0.7;
 }
+
 
 /* Truy vấn media cho thiết kế đáp ứng */
 
