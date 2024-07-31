@@ -46,9 +46,10 @@ dots.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider();
 };
-// thay đổi hình ảnh giày
+// thay đôi hình ảnh giày 
 document.querySelectorAll('.color_nike img').forEach(img => {
     img.addEventListener('mouseover', function() {
-        document.getElementById('main-image').src = this.dataset.src;
+        const mainImage = this.closest('.sub_main_content').querySelector('.div_picture img');
+        mainImage.src = this.dataset.src;
     });
 });

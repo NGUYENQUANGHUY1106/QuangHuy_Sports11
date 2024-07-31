@@ -418,7 +418,7 @@
 }
 .sub_main_content
 {
-    width: 271px;
+    width: 280px;
     height: 420px;
     background-color: #d8d8d8;
     border-radius: 5px;
@@ -435,7 +435,7 @@
 {
     width: 260px;
     height: 260px;
-    margin: 5px 10px;
+    margin: 10px 10px;
     border-radius: 5px;
 }
 .color_nike
@@ -475,4 +475,12 @@
 .tensanpham .price:hover
 {
     color: red;
+}
+/* phụ kiện thể thao */
+.phukien_main_content
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
