@@ -322,6 +322,7 @@
     background-color: rgb(255, 255, 70);
     color: red;
     text-transform: uppercase;
+    font-weight: bold;
     cursor: pointer;
     opacity: 0.7;
 }
@@ -405,4 +406,73 @@
         display: none;
     }
     
+}
+/* Main Conent */
+#main_content
+{
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub_main_content
+{
+    width: 271px;
+    height: 420px;
+    background-color: #d8d8d8;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+.sub_main_content .div_picture
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub_main_content .div_picture img
+{
+    width: 260px;
+    height: 260px;
+    margin: 5px 10px;
+    border-radius: 5px;
+}
+.color_nike
+{
+    display: flex;
+}
+.color_nike img
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  margin: 5px 0px;
+  margin-left: 10px;
+}
+.tensanpham
+{
+    text-align: center;
+}
+.tensanpham .tieude_sanpham
+{
+    color: rgb(255, 81, 0);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    margin-left: 10px;
+}
+.tensanpham .tenchinhsanpham
+{
+    font-size: 17px;
+    font-weight: 550;
+}
+.tensanpham .price
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+.tensanpham .price:hover
+{
+    color: red;
 }

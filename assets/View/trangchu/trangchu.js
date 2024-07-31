@@ -46,3 +46,9 @@ dots.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider();
 };
+// thay đổi hình ảnh giày
+document.querySelectorAll('.color_nike img').forEach(img => {
+    img.addEventListener('mouseover', function() {
+        document.getElementById('main-image').src = this.dataset.src;
+    });
+});
