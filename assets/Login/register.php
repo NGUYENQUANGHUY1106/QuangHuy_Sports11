@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT); // Mã hóa mật khẩu
 
     // Kết nối cơ sở dữ liệu
-    $host = "localhost";
+    $host = "localhost:3366";
     $dbusername = "root";
     $dbpassword = "";
     $dbname = "login";
