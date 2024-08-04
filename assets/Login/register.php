@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Sử dụng prepared statements để tránh SQL Injection
-    $stmt = $conn->prepare("INSERT INTO user (username, email, phoneNumber, password) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO register (username, email, phoneNumber, password) VALUES (?, ?, ?, ?)");
 
     if ($stmt === false) {
         die("Prepare failed: " . $conn->error);
