@@ -276,56 +276,56 @@
 #content {
     width: 100%;
     display: flex;
-    flex-wrap: wrap; /* Cho phép các mục bao gói xuống dòng tiếp theo */
-    justify-content: space-around;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#content .sub_nav_content {
-    width: 23%;
-    border: 1px solid;
-    box-shadow: 0px 0px 5px greenyellow;
-    margin-bottom: 20px; /* Thêm khoảng cách giữa các hàng */
-    box-sizing: border-box;
-}
-
-.sub_nav_content .img_content {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.img_content img {
-    width: 95%;
-    height: auto;
-    margin: 10px 10px;
-}
-
-.sub_nav_content .introdcuton {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    margin: 10px 0px;
-    white-space: nowrap;
-    border-radius: 10px;
-    text-align: center; /* Đảm bảo văn bản được căn giữa */
-}
-
-.sub_nav_content .introdcuton:hover {
-    background-color: rgb(255, 255, 70);
-    color: red;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    opacity: 0.7;
-}
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin-top: 20px;
+ }
+ 
+ #content .sub_nav_content {
+     width: 23%; 
+     border: 1px solid;
+     box-shadow: 0px 0px 5px greenyellow;
+     margin-bottom: 20px;
+     box-sizing: border-box;
+ }
+ 
+ .sub_nav_content .img_content {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .img_content img {
+     width: 95%; 
+     height: auto; 
+     margin: 10px 0; 
+ }
+ 
+ .sub_nav_content .introduction {
+     position: absolute;
+     bottom: 10px;
+     left: 50%;
+     transform: translateX(-50%);
+     color: white;
+     background-color: rgba(0, 0, 0, 0.5);
+     padding: 10px;
+     margin: 10px 0px;
+     white-space: nowrap;
+     border-radius: 10px;
+     text-align: center;
+ }
+ 
+ .sub_nav_content .introduction:hover {
+     background-color: rgb(255, 255, 70);
+     color: red;
+     text-transform: uppercase;
+     font-weight: bold;
+     cursor: pointer;
+     opacity: 0.7;
+ }
+ 
 
 
 /* Truy vấn media cho thiết kế đáp ứng */

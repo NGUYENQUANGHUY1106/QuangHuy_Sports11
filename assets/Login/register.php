@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $password = password_hash($_POST['password'], PASSWORD_BCRYPT); // Mã hóa mật khẩu
+    $password = $_POST['password']; // Mã hóa mật khẩu
 
     // Kết nối cơ sở dữ liệu
     $host = "localhost:3366";
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         // Đăng ký thành công
         echo "Registration successful. Redirecting...";
-        header("refresh:3;url= ../View/trangchu/trangchu.html");
+        header("refresh:3;url= ../View/trangchu/trangchu.php");
         exit();
     } else {
         // Đăng ký thất bại

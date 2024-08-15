@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   if($result->num_rows ==1)
   {
     // thong báo đăng nhập thành công
-    header("Location: ../View/trangchu/trangchu.html");
+    header("Location: ../View/trangchu/trangchu.php");
     exit();
   }
   else

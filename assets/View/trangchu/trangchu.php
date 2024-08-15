@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/View/trangchu/trangchu.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Chủ</title>
-    <link rel="stylesheet" href="/assets/View/trangchu/trangchu.css">
     <link rel="icon" type="image/x-icon" href="/assets/View/trangchu/image/logonav.png">
 </head>
 <body>
@@ -89,33 +90,42 @@
               <li></li>
           </ul>
       </div>
+  <!-- code php cho trang chủ  -->
+    </div>
 
-      <div id="content">
-        <div class="sub_nav_content">
-            <div class="img_content">
-                <img src="/assets/View/trangchu/image/sub_nav_content.png" alt="">
-                <p class="introdcuton">Giày Thể Thao</p>
-            </div>
-        </div>
-        <div class="sub_nav_content">
-            <div class="img_content">
-                <img style="height: 400.34px;" src="/assets/View/trangchu/image/sub_nav_content2.png" alt="">
-                <p class="introdcuton">Phụ Kiện Thể Thao</p>         
-            </div>
-        </div>
-        <div class="sub_nav_content">
-            <div class="img_content">
-                <img style="height: 400.34px;" src="/assets/View/trangchu/image/sub_nav_content3.png" alt="">
-                <p class="introdcuton">Áo Quần Thể Thao</p>
-            </div>
-        </div>
-        <div class="sub_nav_content">
-            <div class="img_content">
-                <img style="height: 400.34px;" src="/assets/View/trangchu/image/sub_nav_content4.png" alt="">
-                <p class="introdcuton">Bóng Đá</p>
-            </div>
-        </div>
-      </div>
+    <div id="content">
+        <?php
+        echo ' <link rel="stylesheet" href="/assets/View/trangchu/trangchu.css"> ';
+        // Kết nối đến cơ sở dữ liệu
+        require("danhsachsanpham.php");
+
+        // Truy vấn để lấy dữ liệu từ bảng sản phẩm
+        $sql = "SELECT * FROM danhsachsanpham";
+        $query = mysqli_query($connect, $sql);
+        $num = mysqli_num_rows($query);
+
+        if ($num > 0) {
+            while ($row = mysqli_fetch_array($query)) {
+                // Kiểm tra xem dữ liệu có hợp lệ không
+                if ($row && isset($row['image_data']) && isset($row['image_name'])) {
+                    ?>
+                    <div class="sub_nav_content">
+                        <div class="img_content">
+                            <img src="<?php echo $row['image_data']; ?>" alt="" style="height: 400px;">
+                            <p class="introduction"><?php echo $row['image_name']; ?></p>
+                        </div>
+                    </div>
+                    <?php
+                } else {
+                    echo "Không có dữ liệu để hiển thị.";
+                }
+            }
+        } else {
+            echo "Không tìm thấy sản phẩm nào.";
+        }
+        ?>
+    </div>
+
     
       <div id="laster">
         <p class="sanphammoi">
@@ -125,23 +135,53 @@
           GIÀY BÓNG ĐÁ -  GIÁ RẺ - DEAL SỐC 
         </p>
       </div>
-     <!-- giày bóng đá -->
+     <!-- code php cho danh sách sản phẩm chính -->
       <div id="main_content">
-        <div class="sub_main_content">
-          <div class="div_picture">
-              <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/vapor15 trà sửa.jpg" alt="">
+        <?php
+           echo '<link rel="stylesheet" href="/assets/View/trangchu/trangchu.css">';
+           // kết nối với csdl 
+           require ("danhsachsanpham.php");
+
+           // câu truy vấn để lấy dữ liệu từ bảng danh sach sản phẩm chính
+           $sql_1 = "SELECT * FROM danhsachsanphamchinh";
+           $query_1 = mysqli_query($connect, $sql_1);
+           $num_1 = mysqli_num_rows($query_1);
+
+           if ($num_1 > 0) {
+           while ($row = mysqli_fetch_array($query_1)) {
+           if($row && isset ($row['image_data']) && isset ($row['image_sub']))
+           {
+            ?>     
+          <div class="sub_main_content">
+            <div class="div_picture">
+                <img id="main-image" src="<?php echo $row ['image_data']; ?>" alt="">
+            </div>
+            <div class="color_nike">
+                <img src="<?php echo $row['image_data'];  ?>" alt="" data-src="<?php echo $row['image_data'] ?>">
+                <img src="<?php echo $row['image_sub']; ?>" alt="" data-src="<?php echo $row['image_sub']; ?>">
+            </div>
+            <div class="tensanpham">
+                <p class="tieude_sanpham"><?php echo $row['name_introduction'] ?></p>
+                <p class="tenchinhsanpham"><?php echo $row['name_product']  ?></p>
+                <p style="font-size: 17px; color: green;" class="select_colorr"><?php echo $row ['color'] ?></p>
+                <p class="price"><?php echo $row['price']; ?></p>
+            </div>
           </div>
-          <div class="color_nike">
-              <img src="/assets/View/trangchu/sanphamnoibat_img/vapor15 trà sửa.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/vapor15 trà sửa.jpg">
-              <img src="/assets/View/trangchu/sanphamnoibat_img/vapor15 hồng.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/vapor15 hồng.jpg">
-          </div>
-          <div class="tensanpham">
-              <p class="tieude_sanpham">Giày Bóng Đá Chính Hãng</p>
-              <p class="tenchinhsanpham">Nike Mercurial Vapor 15 Academy</p>
-              <p style="font-size: 17px; color: green;" class="select_colorr">2 Color</p>
-              <p class="price">2,479,000 VNĐ</p>
-          </div>
-        </div>
+
+          <?php
+           }
+           else
+           {
+            echo "Không có dữ liệu để hiển thị";
+           }
+          } 
+          } else
+              {
+                echo "Không Tìm Thấy Sản Phẩm nào";
+              }
+          ?>
+           
+     
         
         <div class="sub_main_content">
           <div class="div_picture">
