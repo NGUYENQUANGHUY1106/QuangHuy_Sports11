@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   }
    
   // validate Login auththencation
-  $query = "SELECT * FROM register WHERE username='$username' AND password='$password'"; 
+  $query = "SELECT * FROM user WHERE username='$username' AND password='$password'"; 
 
   $result = $conn->query($query);
 

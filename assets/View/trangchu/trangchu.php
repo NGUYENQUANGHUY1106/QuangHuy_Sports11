@@ -63,19 +63,19 @@
         <div class="slider">
           <div class="list">
               <div class="item">
-                  <img style="width: 1472.8px"  src="image/hình nền 5.webp" alt="">
+                  <img style="width: 1512.8px"  src="image/hình nền 5.webp" alt="">
               </div>
               <div class="item">
-                  <img style="width: 1472.8px" src="image/hình nền 2.jpg" alt="">
+                  <img style="width: 1512.8px" src="image/hình nền 2.jpg" alt="">
               </div>
               <div class="item">
-                  <img style="width: 1472.8px" src="image/hình nền 3.webp" alt="">
+                  <img style="width: 1512.8px" src="image/hình nền 3.webp" alt="">
               </div>
               <div class="item">
-                <img style="width: 1472.8px" src="image/hình nền 4.jpg" alt="">
+                <img style="width: 1512.8px" src="image/hình nền 4.jpg" alt="">
             </div>
             <div class="item">
-              <img style="width: 1472.8px" src="image/hình nền 1.png" alt="">
+              <img style="width: 1512.8px" src="image/hình nền 1.png" alt="">
           </div>
           </div>
           <div class="buttons">
@@ -146,7 +146,9 @@
            $sql_1 = "SELECT * FROM danhsachsanphamchinh";
            $query_1 = mysqli_query($connect, $sql_1);
            $num_1 = mysqli_num_rows($query_1);
+          
 
+           
            if ($num_1 > 0) {
            while ($row = mysqli_fetch_array($query_1)) {
            if($row && isset ($row['image_data']) && isset ($row['image_sub']))
@@ -157,8 +159,9 @@
                 <img id="main-image" src="<?php echo $row ['image_data']; ?>" alt="">
             </div>
             <div class="color_nike">
-                <img src="<?php echo $row['image_data'];  ?>" alt="" data-src="<?php echo $row['image_data'] ?>">
-                <img src="<?php echo $row['image_sub']; ?>" alt="" data-src="<?php echo $row['image_sub']; ?>">
+                  <img src="<?php echo $row['image_data'];  ?>" alt="" data-src="<?php echo $row['image_data']; ?>">
+                  <img src="<?php echo $row['image_sub']; ?>" alt="" data-src="<?php echo $row['image_sub1']; ?>">
+                  <img src="<?php echo $row['image_sub2']; ?>" alt="" data-src="<?php echo $row['image_sub3']; ?>">
             </div>
             <div class="tensanpham">
                 <p class="tieude_sanpham"><?php echo $row['name_introduction'] ?></p>
@@ -182,55 +185,6 @@
           ?>
            
      
-        
-        <div class="sub_main_content">
-          <div class="div_picture">
-              <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/supfly10_xanh.png" alt="">
-          </div>
-          <div class="color_nike">
-              <img src="/assets/View/trangchu/sanphamnoibat_img/supfly10_xanh.png" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/supfly10_xanh.png">
-              <img src="/assets/View/trangchu/sanphamnoibat_img/supfly10_den.png" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/supfly10_den.png">
-          </div>
-          <div class="tensanpham">
-              <p class="tieude_sanpham">Giày Bóng Đá Chính Hãng</p>
-              <p style="text-wrap: nowrap;" class="tenchinhsanpham">Nike Mercurial Superfly 10 Elite (FG)</p>
-              <p style="font-size: 17px; color: green;" class="select_colorr">2 Color</p>
-              <p class="price">8,059,000 VNĐ</p>
-          </div>
-        </div>
-
-        <div class="sub_main_content">
-          <div class="div_picture">
-              <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/predato_vang.jpg" alt="">
-          </div>
-          <div class="color_nike">
-              <img src="/assets/View/trangchu/sanphamnoibat_img/predato_vang.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/predato_vang.jpg">
-              <img src="/assets/View/trangchu/sanphamnoibat_img/predato_do.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/predato_do.jpg">
-          </div>
-          <div class="tensanpham">
-              <p class="tieude_sanpham">Giày Bóng Đá Chính Hãng</p>
-              <p style="text-wrap: nowrap;" class="tenchinhsanpham">Nike Mercurial Superfly 10 Elite (FG)</p>
-              <p style="font-size: 17px; color: green;" class="select_colorr">2 Color</p>
-              <p class="price">3,750,000 VNĐ</p>
-          </div>
-        </div>
-
-        <div class="sub_main_content">
-          <div class="div_picture">
-              <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/predato_den.jpg" alt="">
-          </div>
-          <div class="color_nike">
-              <img src="/assets/View/trangchu/sanphamnoibat_img/predato_den.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/predato_den.jpg">
-              <img src="/assets/View/trangchu/sanphamnoibat_img/predato_xanh.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/predato_xanh.jpg">
-              <img src="/assets/View/trangchu/sanphamnoibat_img/predato_xanhbien.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/predato_xanhbien.jpg">
-          </div>
-          <div class="tensanpham">
-              <p class="tieude_sanpham">Giày Bóng Đá Chính Hãng</p>
-              <p style="text-wrap: nowrap;" class="tenchinhsanpham">X CRAZYFAST.3 (FG)</p>
-              <p style="font-size: 17px; color: green;" class="select_colorr">3 Color</p>
-              <p class="price">1.440,000 VNĐ</p>
-          </div>
-        </div>
       </div>
       <div id="laster">
         <p class="sanphammoi">
@@ -241,71 +195,53 @@
         </p>
     </div>
     <!-- phụ kiện -->
-   <div class="phukien_main_content">
-    <div class="sub_main_content">
-      <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/tat_adidas_trang.jpg" alt="">
-      </div>
-      <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/tat_adidas_trang.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/tat_adidas_trang.jpg">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/tat_adidas_den.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/tat_adidas_den.jpg">
-      </div>
-      <div class="tensanpham">
-          <p class="tieude_sanpham">Phụ Kiện Thể Thao Chính Hãng</p>
-          <p class="tenchinhsanpham">Tất Milano 23</p>
-          <p style="font-size: 17px; color: green;" class="select_colorr">2 Color</p>
-          <p class="price">300,000 VNĐ</p>
-      </div>
-    </div>
+    <!-- code php cho phần phụ kiện -->
+    <div class="phukien_main_content">
+   <?php
+    // Liên kết đến tệp CSS
+    echo '<link rel="stylesheet" href="/assets/View/trangchu/trangchu.css"> ';
 
-    <div class="sub_main_content">
-      <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/balo_mu.jpg" alt="">
-      </div>
-      <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/balo_mu.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/balo_mu.jpg">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/balo_mu2.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/balo_mu2.jpg">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/balo_mu3.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/balo_mu3.jpg">
-      </div>
-      <div class="tensanpham">
-          <p class="tieude_sanpham">Phụ Kiện Thể Thao Chính Hãng</p>
-          <p style="margin: 11px 0px;" class="tenchinhsanpham">Balo ManChester United</p>
-          <p class="price">300,000 VNĐ</p>
-      </div>
-    </div>
+    // Yêu cầu tệp danh sách sản phẩm
+    require("danhsachsanpham.php");
 
-    <div class="sub_main_content">
-      <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/gangtay1.jpg" alt="">
-      </div>
-      <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/gangtay1.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/gangtay1.jpg">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/gangtay2.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/gangtay2.jpg">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/gangtay3.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/gangtay3.jpg">
-      </div>
-      <div class="tensanpham">
-          <p class="tieude_sanpham">Phụ Kiện Thể Thao Chính Hãng</p>
-          <p class="tenchinhsanpham">NONSLIP 24</p>
-          <p style="font-size: 17px; color: green;" class="select_colorr">3 Color</p>
-          <p class="price">620,000 VNĐ</p>
-      </div>
-    </div>
+    // Truy vấn để lấy dữ liệu từ bảng
+    $sql_2 = "SELECT * FROM danhsachsanpham_phukienthethao";
+    $query_2 = mysqli_query($connect, $sql_2);
+    $num_2 = mysqli_num_rows($query_2);
 
-    <div class="sub_main_content">
-      <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/ốpbaove.avif" alt="">
-      </div>
-      <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/ốpbaove.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/ốpbaove.avif">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/ốpbaove2.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/ốpbaove2.avif">
-      </div>
-      <div class="tensanpham">
-          <p class="tieude_sanpham">Phụ Kiện Thể Thao Chính Hãng</p>
-          <p class="tenchinhsanpham">ỐP BẢO VỆ ỐNG CHÂN TIRO</p>
-          <p style="font-size: 17px; color: green;" class="select_colorr">2 Color</p>
-          <p class="price">550,000 VNĐ</p>
-      </div>
-    </div>
+    // Kiểm tra nếu có sản phẩm trong kết quả truy vấn
+    if ($num_2 > 0) {
+        while ($row = mysqli_fetch_array($query_2)) {
+            // Kiểm tra nếu các trường cần thiết được thiết lập
+            if ($row && isset($row['image_data']) && isset($row['image_sub'])) {
+   ?>
+                <div class="sub_main_content">
+                    <div class="div_picture">
+                        <img id="main-image" src="<?php echo $row['image_data']; ?>" alt="">
+                    </div>
+                    <div class="color_nike">
+                        <img src="<?php echo $row['image_data']; ?>" alt="" data-src="<?php echo $row['image_data1']; ?>">
+                        <img src="<?php echo $row['image_sub']; ?>" alt="" data-src="<?php echo $row['image_sub1']; ?>">
+                        <img src="<?php echo $row['image_sub2']; ?>" alt="" data-src="<?php echo $row['image_sub3']; ?>">
+                    </div>
+                    <div class="tensanpham">
+                        <p class="tieude_sanpham"><?php echo $row['name_introduction']; ?></p>
+                        <p class="tenchinhsanpham"><?php echo $row['name_product']; ?></p>
+                        <p style="font-size: 17px; color: green;" class="select_colorr"><?php echo $row['color']; ?></p>
+                        <p class="price"><?php echo $row['price']; ?></p>
+                    </div>
+                </div>
+   <?php
+            } else {
+                echo 'Không có dữ liệu để hiển thị';
+            }
+        }
+    } else {
+        echo 'Không Tìm Thấy Sản Phẩm Nào';
+    }
+    ?>
+</div>
+
    </div>
 
   <div id="laster">

@@ -7,8 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $password = $_POST['password']; // Mã hóa mật khẩu
-
+    $password = $_POST['password']; 
     // Kết nối cơ sở dữ liệu
     $host = "localhost:3366";
     $dbusername = "root";
@@ -22,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Sử dụng prepared statements để tránh SQL Injection
-    $stmt = $conn->prepare("INSERT INTO register (username, email, phoneNumber, password) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO user (username, email, phoneNumber, password) VALUES (?, ?, ?, ?)");
 
     if ($stmt === false) {
         die("Prepare failed: " . $conn->error);
