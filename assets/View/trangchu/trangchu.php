@@ -331,72 +331,50 @@
      PHỤ KIỆN THỂ THAO HOT -  GIÁ RẺ - DEAL SỐC 
     </p>
   </div>
+  <!-- code php cho phần bóng đá  -->
   <div class="bongda_main_content">
-    <div class="sub_main_content">
-      <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/bongdapre.jpg" alt="">
-      </div>
-      <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongdapre.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongdapre.jpg">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongdapre2.jpg" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongdapre2.jpg">
-      </div>
-      <div class="tensanpham">
-          <p style="margin: 5px 10px;" class="tieude_sanpham">Bóng Đá Chính Hảng</p>
-          <p style="margin: 5px 0px;" class="tenchinhsanpham">Bóng Premier League Club Elite</p>
-          <p style="margin: 5px 0px;" class="price">1,579,000 VNĐ</p>
-      </div>
-    </div>
+   <?php
+    echo '<link rel="stylesheet" href="/assets/View/trangchu/trangchu.css"> ';
+    require("danhsachsanpham.php");
 
-    <div class="sub_main_content">
-      <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/bongpumavang.avif" alt="">
-      </div>
-      <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongpumavang.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongpumavang.avif">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongpumaxanh.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongpumaxanh.avif">
-      </div>
-      <div class="tensanpham">
-          <p class="tieude_sanpham"> Bóng Đá Chính Hãng</p>
-          <p class="tenchinhsanpham">PUMA Cumbre CONMEBOL 2024</p>
-          <p style="font-size: 17px; color: green;" class="select_colorr">2 Color</p>
-          <p class="price">1,250,000 VNĐ</p>
-      </div>
-    </div>
+    $sql_3 = "SELECT * FROM danhsachsanpham_bongda";
+    $query_3 = mysqli_query($connect,$sql_3);
+    $num_3 = mysqli_num_rows($query_3);
 
+    if($num_3>0)
+    {
+      while($row = mysqli_fetch_array($query_3)){
+      if($row && isset($row['image_data']) && isset($row['image_sub']))
+      {
+  ?>
+   
     <div class="sub_main_content">
       <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/bongmu.avif" alt="">
+          <img id="main-image" src="<?php echo $row['image_data'];   ?>" alt="">
       </div>
       <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongmu.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongmu.avif">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongmu2.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongmu2.avif">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongmu3.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongmu3.avif">
+          <img src="<?php echo $row['image_data'];  ?>" alt="" data-src="<?php echo $row['image_data1'];  ?>">
+          <img src="<?php echo $row ['image_sub']; ?>" alt="" data-src="<?php echo $row ['image_sub1']; ?>">
+          <img src="<?php echo $row ['image_sub2']; ?>" alt="" data-src="<?php echo $row ['image_sub3']; ?>">
       </div>
       <div class="tensanpham">
-          <p style="margin: 5px 10px;" class="tieude_sanpham"> Bóng Đá Chính Hãng</p>
-          <p style="margin: 5px 10px;" class="tenchinhsanpham"> Bóng Thi Đấu ManChester United</p>
-          <p style="margin: 5px 10px;" class="price">1,150,000 VNĐ</p>
+          <p style="margin: 5px 10px;" class="tieude_sanpham"><?php echo $row['name_introduction'];  ?></p>
+          <p style="margin: 5px 0px;" class="tenchinhsanpham"><?php echo $row['name_product'];  ?></p>
+          <p style="margin: 5px 0px;" class="price"><?php echo $row['price'];  ?></p>
       </div>
     </div>
+  <?php
+      } else {
+        echo 'Không có dữ liệu hiển thị';
+      }
+    }
+  }
+    else
+    {
+      echo 'Không tìm thấy sản phẩm nào';
+    }
+  ?>
 
-    <div class="sub_main_content">
-      <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/bongjocker.webp" alt="">
-      </div>
-      <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongjocker.webp" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongjocker.webp">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongjocker2.webp" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongjocker2.webp">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongjocker3.webp" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongjocker3.webp">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongjocker4.webp" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongjocker4.webp">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/bongjocker5.webp" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/bongjocker5.webp">
-      </div>
-      <div class="tensanpham">
-          <p class="tieude_sanpham"> Bóng Đá Chính Hãng</p>
-          <p class="tenchinhsanpham">Bóng Jocker Sport </p>
-          <p style="font-size: 17px; color: green;" class="select_colorr">5 Color</p>
-          <p class="price">720,000 VNĐ</p>
-      </div>
-    </div>
   </div>
   <!-- thông tin khác -->
   <div id="footer">
