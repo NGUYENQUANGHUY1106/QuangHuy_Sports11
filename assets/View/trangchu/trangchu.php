@@ -44,11 +44,13 @@
             <li>Giới Thiệu</li>
             <li>Khuyến Mãi</li>
             <li>Tin Tức</li>
-            <li class="search_nav">
-              <input class="search_sanpham_nav" type="text" placeholder="Tìm kiếm ở đây">
-              <button class="search_nav_button">
-                <ion-icon name="search-outline"></ion-icon>
-              </button>
+            <li >
+            <div class="search">
+                <input type="text" placeholder="Tìm Kiếm Sản Phẩm">
+                <button>
+                    <img src="/assets/product_category/Shoes/image/icons8-search-40.png" alt="">
+                </button>
+            </div>
             </li>
             <li class="giohang_nav">
               <div class="giohang">

@@ -169,34 +169,33 @@
     color: red;
 }
 
-#menu .search_nav {
+#menu .search {
     display: flex;
     align-items: center;
-}
-
-#menu .search_sanpham_nav {
-    width: 310px;
-    height: 36px;
-    font-size: 15px;
-    border: 2px solid #99ca58;
-    box-shadow: 0px 0px 3px #99ca58;
-}
-
-#menu .search_sanpham_nav:focus {
-    outline: none; 
-}
-
-#menu .search_nav_button {
-    width: 40px;
-    height: 35.3px;
-    border: 2px solid #99ca58;
-    background-color: #99ca58;
-    box-shadow: 0px 0px 3px #99ca58;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 2px solid #8BC34A;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  #menu .search input[type="text"] {
+    border: 1px solid #000;
+    outline: none;
+    padding: 10px;
+    flex: 1;
+  }
+  
+  #menu .search button {
+    background-color: #8BC34A;
+    border: none;
+    padding: 10px;
     cursor: pointer;
-}
+  }
+  
+  #menu .search button img {
+    width: 16px;
+    height: 16px;
+  }
+
 
 #menu .search_nav_button:hover {
     background-color: #76aa33;
