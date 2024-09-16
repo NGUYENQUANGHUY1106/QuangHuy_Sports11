@@ -253,74 +253,54 @@
     </p>
   </div>
   <!-- áo quần -->
+  <!-- code php cho phần áo quần thể thao  -->
   <div class="aoquan_main_content">
-    <div class="sub_main_content">
-      <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/aobongdamu_do.avif" alt="">
-      </div>
-      <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aobongdamu_do.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aobongdamu_do.avif">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aobongdamu_xanh.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aobongdamu_xanh.avif">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aobongda_docaro.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aobongda_docaro.avif">
-      </div>
-      <div class="tensanpham">
-          <p class="tieude_sanpham">Áo Bóng Đá Chính Hãng</p>
-          <p class="tenchinhsanpham">Áo Thi Đấu ManChester United</p>
-          <p style="font-size: 17px; color: green;" class="select_colorr">3 Color</p>
-          <p class="price">750,000 VNĐ</p>
-      </div>
-    </div>
+    <?php
+     echo '<link rel="stylesheet" href="/assets/View/trangchu/trangchu.css"> ';
 
-    <div class="sub_main_content">
-      <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/aobongda_real_cam.avif" alt="">
-      </div>
-      <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aobongda_real_cam.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aobongda_real_cam.avif">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aobongda_real_tim.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aobongda_real_tim.avif">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aobongda_real_trang.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aobongda_real_trang.avif">
-      </div>
-      <div class="tensanpham">
-          <p class="tieude_sanpham">Áo Bóng Đá Chính Hãng</p>
-          <p class="tenchinhsanpham">Áo Thi Đấu Real Marid</p>
-          <p style="font-size: 17px; color: green;" class="select_colorr">3 Color</p>
-          <p class="price">650,000 VNĐ</p>
-      </div>
-    </div>
+     require('danhsachsanpham.php');
+     // truy vấn dữ liệu từ bảng 
 
-    <div class="sub_main_content">
-      <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/aobongda_argentina_xanh.avif" alt="">
-      </div>
-      <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aobongda_argentina_xanh.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aobongda_argentina_xanh.avif">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aobongda_argentina_tim.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aobongda_argentina_tim.avif">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aobongda_argentina_xanhdam.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aobongda_argentina_xanhdam.avif">
-      </div>
-      <div class="tensanpham">
-          <p class="tieude_sanpham">Áo Bóng Đá Chính Hãng</p>
-          <p class="tenchinhsanpham"> Áo Thi Đấu Argentina</p>
-          <p style="font-size: 17px; color: green;" class="select_colorr">3 Color</p>
-          <p class="price">810,000 VNĐ</p>
-      </div>
-    </div>
+     $sql_4 = "SELECT * FROM danhsachsanpham_aoquan";
+     $query_4 = mysqli_query($connect,$sql_4);
+     $num_4 = mysqli_num_rows($query_4);
+     
 
+     if($num_4>0)
+     { 
+      while($row = mysqli_fetch_array($query_4)){
+        if($row && isset($row['image_data'])&& isset($row['image_sub'])){
+          
+    ?>
     <div class="sub_main_content">
       <div class="div_picture">
-          <img id="main-image" src="/assets/View/trangchu/sanphamnoibat_img/aobongda_mc_trang.png" alt="">
+          <img id="main-image" src="<?php echo $row['image_data']; ?>" alt="">
       </div>
       <div class="color_nike">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aobongda_mc_trang.png" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aobongda_mc_trang.png">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aobongda_mc_tim.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aobongda_mc_tim.avif">
-          <img src="/assets/View/trangchu/sanphamnoibat_img/aomancity_xanh.avif" alt="" data-src="/assets/View/trangchu/sanphamnoibat_img/aomancity_xanh.avif">
+          <img src="<?php echo $row['image_data']; ?>" alt="" data-src="<?php echo $row['image_data1']  ?>">
+          <img src="<?php echo $row['image_sub'];  ?>" alt="" data-src="<?php echo $row['image_sub1'];  ?>">
+          <img src="<?php echo $row['image_sub2'];  ?>" alt="" data-src="<?php echo $row['image_sub3'];  ?>">
       </div>
       <div class="tensanpham">
-          <p class="tieude_sanpham">Áo Bóng Đá Chính Hãng</p>
-          <p class="tenchinhsanpham">Áo Thi Đấu ManChester City</p>
-          <p style="font-size: 17px; color: green;" class="select_colorr">3 Color</p>
-          <p class="price">720,000 VNĐ</p>
+          <p class="tieude_sanpham"><?php echo $row['name_introduction'] ; ?></p>
+          <p class="tenchinhsanpham"><?php echo $row['name_product'] ?></p>
+          <p style="font-size: 17px; color: green;" class="select_colorr"><?php echo $row['color']  ?></p>
+          <p class="price"><?php echo $row['price']  ?></p>
       </div>
     </div>
+    <?php
+        } else
+        {
+          echo 'Không có dữ liệu để hiển thị';
+        }
+      }
+    } else
+    {
+      echo 'Không tìm thấy sản phẩm nào ';
+    }
+    ?>
+
+   
   </div>
   <!-- bóng đá -->
   <div id="laster">
