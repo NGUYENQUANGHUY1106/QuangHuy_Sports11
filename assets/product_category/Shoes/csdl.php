@@ -6,11 +6,10 @@ $database_name = "product";
 
 $connect = mysqli_connect($server,$username,$password,$database_name);
 
-if(!$connect)
-{
-    die ("Kết Nối Thất Bại". mysqli_connect_error());
-
+if (!$connect) {
+    die("Kết nối không thành công: " . mysqli_connect_error());
 }
+
  mysqli_set_charset($connect,"utf8");
 
 ?>
