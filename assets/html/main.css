@@ -1,0 +1,259 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main
+{
+    width: 1104.34px;
+    height: 869px;
+    background: linear-gradient(135deg,#0a5276,#126BA8,#0C3A6B,#081F49);
+    margin-left: 200px;
+}
+#main .header
+{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#main .menu
+{
+        flex-grow: 1; /* Để menu chiếm khoảng trống giữa logo và menu */
+        display: flex;
+        justify-content: center; /* Đặt menu ra giữa */
+}
+#main .logo 
+{
+    display: flex;
+    align-items: center;
+    margin: 0px 15px;
+    margin-top: 10px;
+}
+#main .logo img
+{
+  width: 50px;
+  margin: 0px 10px;
+}
+#main .logo p
+{
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.header .menu .nav
+{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.header .menu .nav li {
+    list-style-type: none;
+    margin: 0px 20px;
+    font-size: 15px;
+    position: relative; 
+    color: #fff;
+    cursor: pointer;
+}
+
+.header .menu .nav li:hover {
+    color: #A7DF00; 
+}
+
+
+.header .menu .nav li:hover::after {
+    content: '◆'; 
+    position: absolute;
+    bottom: -15px; 
+    left: 50%;
+    transform: translateX(-50%); /* căn giữa theo chiều ngang */
+    color: #A7DF00; 
+    font-size: 12px; 
+}
+
+.header .menu .nav li::after {
+    content: '';
+}
+/* CSS cho container search */
+.header .search {
+    position: relative; /* Đặt relative để icon có thể sử dụng absolute bên trong */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 145.77px;
+    height: 39.21px;
+    border: 1px solid #fff;
+    margin-top: 10px;
+}
+
+/* CSS cho input */
+.header .search input[type="text"] {
+    background: transparent;
+    border: none;
+    width: 100%; /* Để input chiếm hết chiều rộng */
+    padding-left: 30px; /* Chừa khoảng trống cho icon */
+    height: 100%;
+    color: #fff; /* Màu chữ bên trong input */
+}
+
+/* CSS cho icon */
+.header .search img {
+    position: absolute; /* Đặt icon ở vị trí tuyệt đối */
+    left: 10px; /* Canh trái khoảng cách từ icon tới cạnh input */
+    width: 20px; /* Giữ nguyên kích thước của icon */
+    height: 20px;
+    pointer-events: none; /* Đảm bảo icon không ảnh hưởng đến thao tác nhập liệu */
+}
+.header .cart
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.content .left_content .sub
+{
+    text-transform: uppercase;
+    font-size: 64.11px;
+    font-weight: bold;
+    color: #fff;
+}
+.content {
+    display: flex; 
+}
+
+.left_content {
+    width: 300px; 
+    margin-left: 15px;
+    margin-top: 155px;
+}
+
+.introduction {
+    max-width: 100%; 
+    word-wrap: break-word;
+    line-height: 1.5; 
+    color: #fff;
+}
+.content.left_content .introduction
+{
+    font-size: 18px; 
+    max-width: 50px;
+}
+.left_content .shop_now
+{
+    margin-top: 15px;
+}
+.left_content .btn_shop_now
+{
+    width: 154.93px;
+    height: 50.37px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right ,#A8E910,#1C7227);
+    color: #fff;
+    font-size: 16px;
+}
+.social
+{
+    width: 187.75px;
+    height: 38.16px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right ,#105A92,#0C3B6B,#0A305E,#081F49);
+}
+.social p
+{
+    margin-right: 20px;
+    margin-left: 10px;
+    color: #fff;
+}
+.social img
+{
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 50%;
+}
+.right_content
+{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.right_content .information_shoes
+{
+    position: relative;
+    width: 368.62px;
+    height: 128.22px;
+    color: #fff;
+    background: linear-gradient(to right,#A8E910,#368822);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 185px;
+    margin-left: 230px;
+    text-align: left;
+    padding-left: 10px;
+}
+.right_content .button_shoes .bold
+{
+    font-weight: bold;
+}
+.right_content .image_shoes
+{
+    width: 684.46px;
+}
+.right_content .image_shoes img
+{
+    width: 100%;
+    transform: rotate(-15.43deg);
+    margin-top: -187px;
+    margin-left: 140px;
+}
+.right_content .shoes_1
+{
+    margin-top: 100px;
+    margin-left: 10px;
+}
+
+.right_content .shoes_1 .div_1
+{
+    width: 118px;
+    height: 93px;
+    background-color: #57ab3d;
+    position: relative;
+    margin-top: -40px;
+    
+}
+.right_content .shoes_1 .div_2
+{
+    width: 111px;
+    height: 87px;
+    background-color: #A7DF00;
+    border-radius: 5px 0px 0px 0px;
+    position: relative;
+    margin-top: -98px;
+    margin-left: -3px;
+}
+.right_content .shoes_1 img
+{
+    width: 200px;
+    transform: rotate(-25.43deg);
+    margin-top: -140px;
+    margin-left: -15px;
+}
+.shoes_sub
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 300px;
+}

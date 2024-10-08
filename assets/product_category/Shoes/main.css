@@ -278,8 +278,8 @@
 {
   width: 100%;
   border-radius: 10px;
-  background-color: #eeeeee;
-  box-shadow: 0px 0px 10px #95d343;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #000;
 }
 .left_center_content .product .danhmucsanpham_1
 {
@@ -315,9 +315,9 @@
 .bottom_product
 {
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px #95d343;
+  box-shadow: 0px 0px 10px #000;
   margin: 20px 0px;
 }
 .bottom_product .like
@@ -393,15 +393,16 @@
 }
 
 .product_right_center_content {
-  flex-basis: calc(20% - 20px); 
+  flex-basis: calc(30% - 20px); /* Điều chỉnh flex-basis để tạo 3 cột */
   margin: 10px 20px; 
   height: 330px;
-  background-color: #eeeeee;
+  background-color: #fff;
   text-align: center;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0px 0px 10px #95d343;
+  box-shadow: 0px 0px 10px #000;
 }
+
 
 .product_right_center_content .image img {
   width: 160px;
@@ -481,6 +482,29 @@
   margin-top: 20px; 
   padding: 10px;
   margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+}
+.next_to .navigation
+{
+  text-decoration: none;
+  color: #000;
+
+}
+.next_to .navigation1
+{
+   text-decoration: none;
+   color: #000;
+}
+.next_to #main
+{
+  color: #fff;
+  background-color: #EE4D2D;
+  padding: 8px;                                                                                                                                                                                                                                                                                                                                  ;
+  border-radius: 100%;
 }
 .right_center_content .next_to .advance_back
 {
@@ -506,10 +530,88 @@
 {
   background-color: #EE4D2D;
   padding: 5px 8px;
+  border-radius: 100%;
 }
 .right_center_content .next_to #sub:hover
 {
   color:#EE4D2D ;
 }
+/* bottom_soccer_shoes */
+#bottom_Soccer_Shoes
+{
+   width: 100%;
+   margin-top: 20px;
+   background-color: #95d343;
+   color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding: 10px 0px;
+   
+}
+.mienphivanchuyen
+{
+    display: flex;
+    font-size: 20px;
+}
+.mienphivanchuyen .img_mienphivanchuyen img
+{
+    width: 30px;
+    height: 30px;
+    margin: 5px 5px;
+}
+.mienphivanchuyen .thongtin p
+{
+  margin: 5px 10px;
+}
+/* footer */
+#footer
+{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0px;
+}
+#footer .information_contact .main
+{
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #95d343;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+#footer .information_contact .image
+{
+  display: flex;
+  margin: 5px 0px;
+}
+#footer .information_contact .image img
+{
+  margin: 5px 10px;
+  font-size: 18px;  
+}
+#footer .information_contact p
+{
+  margin: 8px;
+}
+#footer .sub_information_contact .email:hover
+{
+ color: #76aa33;
+ cursor: pointer;
+}
+#footer .image {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa các icon */
+}
+
+.fb-page {
+  max-width: 300px; /* Giới hạn chiều rộng */
+  height: 100px;    /* Giới hạn chiều cao nếu cần */
+  overflow: hidden;
+}
+
 
 
