@@ -393,7 +393,7 @@
 }
 
 .product_right_center_content {
-  flex-basis: calc(30% - 20px); /* Điều chỉnh flex-basis để tạo 3 cột */
+  flex-basis: calc(20% - 15px); 
   margin: 10px 20px; 
   height: 330px;
   background-color: #fff;
@@ -444,37 +444,25 @@
   color: #95d343;
 }
 /* sub_information_product */
-.sub_information_product .sub_img img
+.sub_img
+{
+  display: flex;
+}
+.sub_img .img-fluid
 {
   width: 40px;
   height: 40px;
   border-radius: 5px;
   float: left;
-  margin-left: 10px;
-  margin-bottom: 5px;
+  margin: 5px 10px;
+  
 }
-.sub_information_product {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
+.card-body .card-text1:hover
+{
+  color: #EE4D2D;
   cursor: pointer;
 }
 
-.sub_information_product .sub_img {
-  display: flex;
-  width: 100%; 
-}
-.sub_information_product .price_sub_img {
-  font-size: 20px;
-}
-.sub_information_product .price_sub_img .name_product:hover
-{
-  color: #95d343;
-}
-.sub_information_product .price_sub_img .price {
-  color: red;
-}
 /* next_to */
 .next_to {
   width: 84%; 
