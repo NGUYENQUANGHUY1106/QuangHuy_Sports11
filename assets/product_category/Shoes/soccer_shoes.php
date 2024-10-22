@@ -54,14 +54,13 @@
                 <li class="nav-item"><a class="nav-link" href="#">Giới Thiệu</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Khuyến Mãi</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Tin Tức</a></li>
-                <li class="nav-item">
+                <li class="nav-item1">
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Tìm Kiếm Sản Phẩm">
                         <button class="btn btn-outline-success" type="submit"><img src="/assets/product_category/Shoes/image/icons8-search-16.png" alt="Search"></button>
                     </form>
                 </li>
                 <li class="nav-item d-flex align-items-center">
-                    <img src="/assets/product_category/Shoes/image/icons8-shopping-basket-25.png" alt="Basket" width="25">
                     <span class="ms-2">Giỏ Hàng</span>
                 </li>
                 <li class="nav-item d-flex align-items-center ms-3">
@@ -95,7 +94,7 @@
     <div class="row">
         <!-- Left Sidebar -->
         <div class="col-md-3">
-            <h5 class="mb-3">Danh Mục Sản Phẩm</h5>
+            <h5 class="mb-3" id="danh_muc_san_pham">Danh Mục Sản Phẩm</h5>
             <ul class="list-group">
                 <li class="list-group-item">Giày Bóng Đá</li>
                 <li class="list-group-item">Phụ Kiện Thể Thao</li>
@@ -104,7 +103,7 @@
             </ul>
 
             <!-- Bottom Product Suggestions -->
-            <h6 class="mt-4">Có thể bạn thích</h6>
+            <h6 class="mt-4" id="danh_muc_san_pham">Có thể bạn thích</h6>
             <div class="list-group">
                 <?php
                 require("csdl.php");
@@ -117,11 +116,12 @@
                     while($row = mysqli_fetch_array($query)) {
                         if($row && isset($row['image'])) {
                 ?>
-                <div class="d-flex align-items-center mb-3">
+                <div class="d-flex align-items-center mb-3" id="co_the_ban_thich">
                     <img src="<?php echo $row['image']; ?>" alt="Product Image" class="me-3" style="width: 50px;">
                     <div>
                         <p class="mb-1"><?php echo $row['name_product']; ?></p>
-                        <p class="text-muted"><s><?php echo $row['price_sale']; ?></s> <span><?php echo $row['price_product']; ?></span></p>
+                        <p class="text-muted"><s class="price_sale"><?php echo $row['price_sale']; ?></s> <br>
+                        <span class="price_product" style="margin-left: 5px;"><?php echo $row['price_product']; ?></span></p>
                     </div>
                 </div>
                 <?php
@@ -147,7 +147,7 @@
 
                 $countSql = "SELECT COUNT(id) AS total FROM shoes_content";
                 $countResult = mysqli_query($conn, $countSql);
-                $countRow = mysqli_fetch_assoc($countResult);
+                $countRow = mysqli_fetch_assoc($countResult);   
                 $total_records = $countRow['total'];
 
                 $limit = 9;
@@ -160,21 +160,28 @@
 
                 while ($row = mysqli_fetch_array($productResult)) {
                 ?>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="<?php echo $row['image_main']; ?>" class="card-img-top" alt="Product Image">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="<?php echo $row['image_main']; ?>" class="card-img-top" alt="Product Image">
 
-                    <div class="sub_img ">
+                    <div class="sub_img" style="display: none;">
                         <img src="<?php echo $row['image_main']; ?>" alt="" data-src="<?php echo $row['image_main']; ?>" class="img-fluid me-2">
                         <img src="<?php echo $row['image_sub1']; ?>" alt="" data-src="<?php echo $row['image_sub1']; ?>" class="img-fluid me-2">
                         <img src="<?php echo $row['image_sub2']; ?>" alt="" data-src="<?php echo $row['image_sub2']; ?>" class="img-fluid">
+                        <p class="product-price-hover"><?php echo $row['price_product']; ?></p>
                     </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $row['name_product']; ?></h5>
-                            <p class="card-text"><s><?php echo $row['price_sale']; ?></s> <span class="card-text1"><?php echo $row['price_product']; ?></span></p>
-                        </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $row['name_product']; ?></h5>
+                        <p class="card-text">
+                            <s><?php echo $row['price_sale']; ?></s> <br>
+                            <span class="card-text1"><?php echo $row['price_product']; ?></span>
+                        </p>
                     </div>
-                </div>
+    </div>
+</div>
+
+
                 <?php
                 }
                 ?>

@@ -261,6 +261,31 @@
   font-size: 16px;
 
 }
+/* navigation */
+.ms-auto .nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.ms-auto .nav-item::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px; 
+  bottom: 0;
+  left: 50%; 
+  background-color: red; 
+  transition: all 0.3s ease; 
+  transform: translateX(-50%);
+}
+
+.ms-auto .nav-item:hover::before {
+  width: 95%; 
+  left: 0; 
+  transform: translateX(0);
+  cursor: pointer;
+}
+
 /* main_content */
 .main_content
 {
@@ -306,11 +331,38 @@
   width: 100%;
   margin-left: 0;
 }
-.left_center_content .product  #danhmucsanpham_2:hover
+#danh_muc_san_pham
 {
-  color: #95d343;
+   font-size: 20px;
+   font-weight: 550;
+   background-color: #acabab;
+   border-radius: 10px;
+   padding: 8px;
+   box-shadow: 0px 0px 10px #b5b5b5;
+}
+.list-group .list-group-item:hover
+{
+  background-color: #1d1b1b;
+  color: #ec4d37;
   cursor: pointer;
 }
+.text-muted .price_product:hover
+{
+  color: orange;
+  cursor: pointer;
+}
+.text-muted .price_sale
+{
+  color: red;
+  cursor: pointer;
+}
+#co_the_ban_thich
+{
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  box-shadow: 0px 0px 10px rgb(126, 124, 124);
+}
+
 /* bottom_product */
 .bottom_product
 {
@@ -383,6 +435,10 @@
   margin-right: auto;
 }
 /* right_center_content */
+.col-md-9 .row
+{
+  margin-left: 15px;
+}
 .right_center_content {
   width: 65%;
   margin-top: 10px;
@@ -461,6 +517,35 @@
 {
   color: #EE4D2D;
   cursor: pointer;
+}
+/* Ẩn ban đầu */
+/* Ẩn hình ảnh thay thế và giá khi mới load */
+.sub_img {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.card-body {
+  transition: all 0.3s ease;
+}
+
+/* Khi hover vào sản phẩm */
+.col-md-4:hover .sub_img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.col-md-4:hover .card-body {
+  display: none;
+}
+
+/* Phần giá sản phẩm khi hover */
+.product-price-hover {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: red;
 }
 
 /* next_to */
@@ -600,6 +685,3 @@
   height: 100px;    /* Giới hạn chiều cao nếu cần */
   overflow: hidden;
 }
-
-
-
