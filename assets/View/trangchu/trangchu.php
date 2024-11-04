@@ -155,7 +155,7 @@
            while ($row = mysqli_fetch_array($query_1)) {
            if($row && isset ($row['image_data']) && isset ($row['image_sub']))
            {
-            ?>     
+            ?>      
           <div class="sub_main_content">
             <div class="div_picture">
                 <img id="main-image" src="<?php echo $row ['image_data']; ?>" alt="">
